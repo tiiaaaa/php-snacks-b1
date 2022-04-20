@@ -3,15 +3,14 @@
 
 $casualNumber = [];
 
-while (count($casualNumber) < 15) {
+$index = 0;
+while ($index < 15) {
     $number = rand(0, 100);
-
-    if(!in_array($number, $casualNumber)) {
-        $casualNumber[] = $number;
-    };
-
+    $casualNumber[] = $number;
+    $index++;
 };
 
+var_dump($casualNumber);
 ?>
 
 <!DOCTYPE html>
