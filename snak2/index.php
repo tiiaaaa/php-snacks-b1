@@ -9,12 +9,6 @@
  * 
  *  Se tutto è ok stampare "Accesso riuscito", altrimenti "Accesso negato"
  */
-
-$name = $_GET['name'];
-$mail = $_GET['mail'];
-$age = $_GET['age'];
-
-
 ?>
 
 <!DOCTYPE html>
@@ -26,8 +20,20 @@ $age = $_GET['age'];
     <title>snak2</title>
 </head>
 <body>
-    <h3>
-        <?php if(strlen($name) > 3)?>
-    </h3>
+    <div>
+        <p>
+            <?php 
+            $params = $_GET;
+
+            if ((strlen($params['name']) > 3)  
+            && (strpos($params['mail'], '@') && (strpos($params['mail'], '.'))  
+            && (is_numeric($params['age'])) )) {
+                echo "Accesso riuscito";
+            } else {
+                echo "Accesso negato";
+            }
+            ?>
+        </p>
+    </div>
 </body>
 </html>

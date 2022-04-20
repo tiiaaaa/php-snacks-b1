@@ -42,6 +42,8 @@ $matches = [
 </head>
 <body>
     <ul>
+        <!-- Ciclo per la lunghezza dell' array $matches e per ogni subarray all' inice 'i' stampo il team1, il team2 
+        i punti del team1 e i punti del team2 -->
         <?php for($i = 0; $i < count($matches); $i++) { ?>
             <li>
                 <?php echo $matches[$i]['team1'] . ' - ' . $matches[$i]['team2']; ?> |
