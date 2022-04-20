@@ -4,9 +4,15 @@
 $casualNumber = [];
 
 $index = 0;
+
 while ($index < 15) {
     $number = rand(0, 100);
-    $casualNumber[] = $number;
+    if(!in_array($number, $casualNumber, true)) {
+        $casualNumber[] = $number;
+    } else{
+        echo 'Numero gia presente';
+    }
+
     $index++;
 };
 
