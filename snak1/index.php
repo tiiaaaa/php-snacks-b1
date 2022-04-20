@@ -8,7 +8,26 @@
  */
 
 $matches = [
-    
+    [
+        'team1' => 'Cairo',
+        'team2' => 'Venezia',
+        'point_team_1' => '80',
+        'point_team_2' => '45',
+    ],
+
+    [
+        'team1' => 'Cipro',
+        'team2' => 'Ginevra',
+        'point_team_1' => '56',
+        'point_team_2' => '67',
+    ],
+
+    [
+        'team1' => 'LasVegas',
+        'team2' => 'LasPalmas',
+        'point_team_1' => '33',
+        'point_team_2' => '18',
+    ],
 ]
 
 ?>
@@ -22,6 +41,13 @@ $matches = [
     <title>Document</title>
 </head>
 <body>
-    
+    <ul>
+        <?php for($i = 0; $i < count($matches); $i++) { ?>
+            <li>
+                <?php echo $matches[$i]['team1'] . ' - ' . $matches[$i]['team2']; ?> |
+                <?php echo $matches[$i]['point_team_1'] . ' - ' . $matches[$i]['point_team_2']; ?>
+            </li>
+        <?php } ?>
+    </ul>
 </body>
 </html>
